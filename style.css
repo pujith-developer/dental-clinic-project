@@ -522,6 +522,14 @@ animation: team1 linear both;
     animation-timeline: view();
     animation-range: entry 10% cover 40%;
     justify-content: center;
+     transition: transform 0.5 ease;
+}
+
+.team1:hover img{
+  overflow: hidden;
+  transform: scale(0.94);
+  transition: 0.5s;
+  border-radius: 5px;
 }
 
 @keyframes team1 {
@@ -534,6 +542,9 @@ animation: team1 linear both;
         opacity: 1;
         transform: translateY(0);
     }
+}
+.team1:hover{
+  background: #fff;
 }
 .team1 h3{
   font-size: 25px;
@@ -586,6 +597,14 @@ animation: team1 linear both;
     animation-timeline: view();
     animation-range: entry 10% cover 40%;
     justify-content: center;
+  transition: transform 0.5 ease;
+}
+
+.team1:hover img{
+  overflow: hidden;
+  transform: scale(0.94);
+  transition: 0.5s;
+  border-radius: 5px;
 }
 
 @keyframes team1 {
@@ -599,7 +618,9 @@ animation: team1 linear both;
         transform: translateY(0);
     }
 }
-
+.team1:hover{
+  background: #fff;
+}
 .team1 h3{
   font-size: 25px;
   text-align: center;
@@ -1016,6 +1037,7 @@ animation: sline2 linear both;
         transform: translatey(0);
     }
 }
+
 .schedule h1{
   font-size: 95px;
   color: #fff;
@@ -1055,7 +1077,7 @@ animation: sline2 linear both;
     height: 2px;
     background-color: #fff;
     border: none;
-    margin: 60px auto;
+    margin: 70px auto;
 animation: sline linear both;
     animation-timeline: view();
     animation-range: entry 10% cover 40%;
@@ -1078,7 +1100,7 @@ animation: sline linear both;
     height: 2px;
     background-color: #fff;
     border: none;
-    margin: 60px auto;
+    margin: 70px auto;
 animation: sline2 linear both;
     animation-timeline: view();
     animation-range: entry 10% cover 40%;
@@ -1096,6 +1118,7 @@ animation: sline2 linear both;
         transform: translatey(0);
     }
 }
+
 .schedule h1{
   font-size: 56px;
   color: #fff;
