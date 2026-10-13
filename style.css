@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
      font-family: "Rufina", serif;
-    overflow-x: hidden;
+}
+html,body{
+  overflow-x: clip;
 }
 .header{
   min-height: 100vh;
@@ -60,6 +62,7 @@ nav img{
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: right;
+  overflow: hidden;
 }
 .text-box h1{
   font-size: 92px;
@@ -69,6 +72,30 @@ nav img{
   margin: 20px 0 40px;
   font-size: 21px;
   color: #fff;
+}
+.text-box h1,
+.text-box p,
+.hero-btn{
+  overflow: hidden;
+animation: slideup 1.9s ease-out forwards ;
+       transform: translateY(100%);
+       opacity: 0;
+}
+@keyframes slideup {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.text-box p{
+    animation-delay: 1s;
+}
+.hero-btn{
+    animation-delay: 1s;
 }
 .hero-btn{
   display: inline-block;
@@ -150,9 +177,42 @@ padding: 30px;
 .wleft h2{
   font-size: 78px;
   font-weight: normal;
+animation: wh2 linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
 }
+
+@keyframes wh2 {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .wright{
   justify-content: center;
+animation: wright linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes wright {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .wright p{
   font-size: 20px;
@@ -188,9 +248,43 @@ padding: 30px;
   font-size: 23px;
   font-weight: normal;
   text-align: center;
+animation: wh2 linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
 }
+
+@keyframes wh2 {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 .wright{
   justify-content: center;
+animation: wright linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes wright {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .wright p{
   font-size: 16px;
@@ -207,6 +301,8 @@ padding: 30px;
   font-size: 18px;
   text-align: center;
   padding-left: 18px;
+  margin: 15px auto;
+  display: block;
 }
 .wright img{
   width:95%;
@@ -231,6 +327,22 @@ padding: 30px;
 }
 .atop{
   text-align: center;  
+animation: atop linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes atop {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .atop h1{
   font-size: 65px;
@@ -255,13 +367,64 @@ padding: 30px;
   color: #FFF9F2;
   justify-content: center;
   padding-top: 40px;
+animation: abottom linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes abottom {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatex(0);
+    }
 }
 .abottom img{
   margin-bottom: 50px;
+animation: aimg linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
 }
+
+@keyframes aimg {
+    from {
+        opacity: 0;
+        transform: translatex(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
 @media (max-width:768px){
   .atop{
   text-align: center;  
+animation: atop linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes atop {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .atop h1{
   font-size: 29px;
@@ -290,6 +453,22 @@ padding: 30px;
   color: #FFF9F2;
   padding-top: 20px;
   margin-bottom: 20px;
+animation: abottom linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes abottom {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .abottom img{
   width:95%;
@@ -298,6 +477,22 @@ padding: 30px;
   margin: 0px auto;
   object-fit: cover;
   border-radius: 8px;
+animation: aimg linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes aimg {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatex(0);
+    }
 }
 }
 
@@ -323,6 +518,22 @@ padding: 30px;
   background:linear-gradient(to  right,#DFF1F1,#fff,#DFF1F1);
   border-radius: 5px;
   border: 1px solid #000000;
+animation: team1 linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes team1 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .team1 h3{
   font-size: 25px;
@@ -371,7 +582,24 @@ padding: 30px;
   width: 90%;
   height: auto;
   margin: 0px auto;
+animation: team1 linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
 }
+
+@keyframes team1 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .team1 h3{
   font-size: 25px;
   text-align: center;
@@ -396,6 +624,22 @@ padding: 30px;
 }
 .sertop{
   text-align: center;
+animation: sertop linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes sertop {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .sertop p{
   font-size: 22px;
@@ -416,11 +660,27 @@ padding: 30px;
    padding-top: 40px;
 }
 .serb-1{
-  border: 1px solid;
   border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+animation: serb-1 linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes serb-1 {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .serb-1:hover{
-  border: 1px solid #43637E;
   background-color: #43637E;
   border-radius: 10px;
   transition: 0.5s;
@@ -431,6 +691,11 @@ padding: 30px;
   object-fit: cover;
   padding: 15px;
   border-radius: 24px;
+  transition: transform 0.5 ease;
+}
+.serb-1:hover img{
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 .serb-1 h2{
   text-align: center;
@@ -438,12 +703,14 @@ padding: 30px;
   font-weight: normal;
   padding: 8px;
   color: #FFF9F2;
+  padding-bottom: 15px;
 }
 .serb-1 p{
   font-size: 19px;
   text-align: center;
   padding-bottom: 15px;
   color: #FCF9EA;
+  padding-top: 15px;
 }
 .service a{
   border: 1px solid #FFF9F2;
@@ -456,6 +723,22 @@ padding: 30px;
   text-decoration: none;
   color: #FFF9F2;
   border-radius: 5px;
+animation: sera linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes sera {
+    from {
+        opacity: 0;
+        transform: translatey(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .service a:hover{
   background-color: #fff;
@@ -468,6 +751,22 @@ padding: 30px;
 /* service */
 .sertop{
   text-align: center;
+animation: sertop linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes sertop {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .sertop p{
   font-size: 19px;
@@ -492,11 +791,40 @@ padding: 30px;
   margin: 0px auto;
   width: 90%;
   height: auto;
+  overflow: hidden;
+  transition: all 0.4s ease;
+animation: serb-1 linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes serb-1 {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .serb-1:hover{
-  border: 1px solid #43637E;
   background-color: #43637E;
   border-radius: 10px;
+  transition: 0.5s;
+}
+.serb-1 img{
+  width: 450px;
+  height: 550px;
+  object-fit: cover;
+  padding: 15px;
+  border-radius: 24px;
+  transition: transform 0.5 ease;
+}
+.serb-1:hover img{
+  transform: scale(1.1);
   transition: 0.5s;
 }
 .serb-1 img{
@@ -514,6 +842,7 @@ padding: 30px;
   font-weight: normal;
   padding: 5px;
   color: #FFF9F2;
+  padding-bottom: 10px;
 }
 .serb-1 p{
   font-size: 17px;
@@ -524,6 +853,7 @@ padding: 30px;
   width: 95%;
   margin: auto;
   display: block;
+  padding-top: 10px;
 }
 .service a{
   border: 1px solid #fff;
@@ -536,6 +866,22 @@ padding: 30px;
   text-decoration: none;
   color: #fff;
   border-radius: 5px;
+animation: sera linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes sera {
+    from {
+        opacity: 0;
+        transform: translatey(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .service a:hover{
   background-color: #fff;
@@ -543,6 +889,9 @@ padding: 30px;
   transition: 0.5s;
 }
 }
+
+
+
 /* clinic */
 .clinic p{
   font-size: 22px;
@@ -619,13 +968,53 @@ padding: 30px;
 .schedule{
   background-color: #425B9A;
   margin-top: 50px;
+  padding: 20px 0px;
 }
 .sline{
     width: 90%;
     height: 2px;
     background-color: #fff;
     border: none;
-    margin: 80px auto;
+    margin: 70px auto;
+animation: sline linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes sline {
+    from {
+        opacity: 0;
+        transform: translatey(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+.sline2{
+  width: 90%;
+    height: 2px;
+    background-color: #fff;
+    border: none;
+    margin: 70px auto;
+animation: sline2 linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes sline2 {
+    from {
+        opacity: 0;
+        transform: translatey(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
 }
 .schedule h1{
   font-size: 95px;
@@ -658,19 +1047,62 @@ padding: 30px;
 .schedule{
   background-color: #425B9A;
   margin-top: 20px;
+  padding: 10px 0px;
+
 }
 .sline{
     width: 90%;
     height: 2px;
     background-color: #fff;
     border: none;
-    margin: 50px auto;
+    margin: 60px auto;
+animation: sline linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes sline {
+    from {
+        opacity: 0;
+        transform: translatey(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+.sline2{
+  width: 90%;
+    height: 2px;
+    background-color: #fff;
+    border: none;
+    margin: 60px auto;
+animation: sline2 linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes sline2 {
+    from {
+        opacity: 0;
+        transform: translatey(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
 }
 .schedule h1{
   font-size: 56px;
   color: #fff;
   text-align: center;
   font-weight: normal;
+  width: 90%;
+  margin: 0 auto;
 }
 .schedule a{
   text-align: center;
@@ -754,6 +1186,22 @@ padding: 30px;
 .reviewcol{
   border-left: 3px solid #165823;
   border-radius: 17px;
+animation: reviewcol linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    justify-content: center;
+}
+
+@keyframes reviewcol {
+    from {
+        opacity: 0;
+        transform: translatex(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatex(0);
+    }
 }
 .reviewcol:hover{
   background-color: #fff;
