@@ -1115,7 +1115,7 @@ animation: sline2 linear both;
 @keyframes sline2 {
     from {
         opacity: 0;
-        transform: translatey(100px);
+        transform: translatey(0);
     }
 
     to {
