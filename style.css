@@ -124,8 +124,13 @@ nav .fa{
     text-align: center;
   }
   .text-box h1{
-  font-size: 25px;
+  font-size: 38px;
   font-weight: bold;
+}
+.text-box p{
+  margin: 20px 0px;
+  font-size: 21px;
+  color: #fff;
 }
 .nav-links ul li{
   display: block;
